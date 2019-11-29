@@ -7,15 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		95E25CC223917980002924D0 /* SSBouncingBallView.h in Headers */ = {isa = PBXBuildFile; fileRef = 95E25CC123917980002924D0 /* SSBouncingBallView.h */; };
-		95E25CC423917980002924D0 /* SSBouncingBallView.m in Sources */ = {isa = PBXBuildFile; fileRef = 95E25CC323917980002924D0 /* SSBouncingBallView.m */; };
+		95E25CCD239179D1002924D0 /* SSBouncingBallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E25CCC239179D1002924D0 /* SSBouncingBallView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		95E25CBE23917980002924D0 /* SSBouncingBall.saver */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SSBouncingBall.saver; sourceTree = BUILT_PRODUCTS_DIR; };
-		95E25CC123917980002924D0 /* SSBouncingBallView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSBouncingBallView.h; sourceTree = "<group>"; };
-		95E25CC323917980002924D0 /* SSBouncingBallView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSBouncingBallView.m; sourceTree = "<group>"; };
 		95E25CC523917980002924D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		95E25CCC239179D1002924D0 /* SSBouncingBallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSBouncingBallView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,8 +46,7 @@
 		95E25CC023917980002924D0 /* SSBouncingBall */ = {
 			isa = PBXGroup;
 			children = (
-				95E25CC123917980002924D0 /* SSBouncingBallView.h */,
-				95E25CC323917980002924D0 /* SSBouncingBallView.m */,
+				95E25CCC239179D1002924D0 /* SSBouncingBallView.swift */,
 				95E25CC523917980002924D0 /* Info.plist */,
 			);
 			path = SSBouncingBall;
@@ -62,7 +59,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95E25CC223917980002924D0 /* SSBouncingBallView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +94,7 @@
 				TargetAttributes = {
 					95E25CBD23917980002924D0 = {
 						CreatedOnToolsVersion = 11.2.1;
+						LastSwiftMigration = 1120;
 					};
 				};
 			};
@@ -134,7 +131,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95E25CC423917980002924D0 /* SSBouncingBallView.m in Sources */,
+				95E25CCD239179D1002924D0 /* SSBouncingBallView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,12 +250,21 @@
 		95E25CC923917980002924D0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = SSBouncingBall/Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = JF.SSBouncingBall;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SSBouncingBall/SSBouncingBall-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				WRAPPER_EXTENSION = saver;
 			};
 			name = Debug;
@@ -266,12 +272,20 @@
 		95E25CCA23917980002924D0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = SSBouncingBall/Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = JF.SSBouncingBall;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SSBouncingBall/SSBouncingBall-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				WRAPPER_EXTENSION = saver;
 			};
 			name = Release;
